@@ -1,10 +1,11 @@
-def exec(s):
-    return s
+import operator as op
+def exec(n):
+    return op.eq(op.mod(n, 2), 0)
 
 def display(f, *args):
     print(f(*args))
 
 if __name__ == "__main__":
-    s = input()
-    identity = lambda x: x
-    display(identity, exec(s))
+    n = int(input())
+    f = lambda x: (('No'), ('Yes'))[x]
+    display(f, is_even(n))
