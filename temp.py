@@ -1,10 +1,9 @@
-def exec(s):
-    return s
+def exec(xs):
+    return xs
 
 def display(f, *args):
     print(f(*args))
 
 if __name__ == "__main__":
-    s = input()
-    identity = lambda x: x
-    display(identity, exec(s))
+    xs = [input() for _ in range(2)]
+    display('\n'.join, exec(xs))
